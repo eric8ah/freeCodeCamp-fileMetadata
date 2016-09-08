@@ -8,20 +8,19 @@
   <title>File Metadata freeCodeCamp Project</title>
   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <p>This is a very simple test harness which posts to [website]</p>
         <p>Take a look at <em>View Page Source</em> to see how it works</p>
-        <input id="upload-input" type="file" name="uploads[]"><br/>
-        <button class="btn btn-lg upload-btn" type="button">Upload File</button>
+        <form id = "uploadForm"
+              enctype="multipart/form-data"
+              action = "/api/upload"
+              method = "post">
+            <input type="file" name="fileUpload" /><br/>
+            <input type="submit" value="Upload File" name="submit">
+        </form>
         </div>
-    
-    <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="//code.jquery.com/jquery-migrate-2.2.0.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="javascripts/upload.js"></script>
 </body>
 </html>
     
